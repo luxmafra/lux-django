@@ -143,12 +143,12 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
-    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
 
     AWS_S3_SIGNATURE_VERSION = "s3v4"
 
-    AWS_DEFAULT_ACL = 'private'
+    AWS_DEFAULT_ACL = 'public-read'
 
     # STATIC FILES CONFIGURATION
     # --------------------------------------------------
