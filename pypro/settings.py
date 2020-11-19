@@ -146,6 +146,8 @@ if AWS_ACCESS_KEY_ID:
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
 
+    AWS_S3_REGION_NAME = 'eu-west-2'
+
     AWS_S3_SIGNATURE_VERSION = "s3v4"
 
     AWS_DEFAULT_ACL = 'public-read'
