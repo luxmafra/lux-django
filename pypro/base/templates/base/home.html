@@ -21,22 +21,24 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'base:home' %}">Lux Django</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{% url 'base:home' %}">Lux Django</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-
-    </ul>
-
-  </div>
-</nav>
 			<div class="jumbotron">
 				<h2>
 					Lux Django
@@ -54,7 +56,7 @@
 						<div class="card-body">
 							<p class="card-text">
 								<img src="{% static 'img/luxmafra.jpeg' %}" width="150px" alt="luxmafra's photo" class="img-thumbnail float-left mr-3" />
-                                Lucas Mafra Chagas is a Software Engineer Bachelor’s student who will graduate in 2022
+                                <b>Lucas Mafra Chagas</b> is a Software Engineer Bachelor’s student who will graduate in 2022
                                 with international experience living in different countries providing with language
                                 skills and a wider outlook. Studying towards Python 3 Specialisation and Django Web
                                 Framework with the capacity to learn and passion to improve personal as well as
@@ -70,6 +72,28 @@
 	</div>
 </div>
 
+  <footer class="main-footer mt-5 pt-4">
+      <div class="container">
+          <div class="row">
+              <div class="row">
+                  <address>
+                      E-mail:
+                      <br/>
+                      <a href="mailto:luxmafra@gmail.com">luxmafra@gmail.com</a>
+                  </address>
+              </div>
+          </div>
+      </div>
+      <div class="rights pb-4">
+          <div class="container">
+              <div class="row">
+                  <div class="row">
+                      {% now 'Y' %} Lux Django. All the rights reserved.
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
 
   </body>
 </html>
