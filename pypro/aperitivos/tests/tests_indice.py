@@ -12,6 +12,7 @@ def resp(client):
 def test_status_code(resp):
     assert resp.status_code == 200
 
+
 @pytest.mark.parametrize(
     'title',
     [
@@ -19,11 +20,17 @@ def test_status_code(resp):
         'Spartan'
     ]
 )
-
-
 def test_titulo_video(resp, title):
     assert_contains(resp, title)
-#
-#
-# def test_conteudo_video(resp):
-#     assert_contains(resp, '<iframe src="https://player.vimeo.com/video/482717685"')
+
+
+@pytest.mark.parametrize(
+    'slug',
+    [
+        'gladiator',
+        'spartan'
+    ]
+)
+def test_link_video(resp, slug):
+    video_link = reverse('aperitivos:video', args=(slug,))
+    assert_contains(resp, f'href="{video_link}"')

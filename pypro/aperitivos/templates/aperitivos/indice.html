@@ -10,7 +10,7 @@
 		    <h1 class="mt-4 mb-3">List of Videos</h1>
 			<ol>
 				{% for video in videos %}
-					<li>{{ video.title | default:"Missing the Tile" }}</li>
+				<li><a href="{{ video.get_absolute_url }}">{{ video.title | default:"Missing the Tile" }}</a></li>
 					{% empty %}
 					<li>No video was found on this page.</li>
 				{% endfor %}
