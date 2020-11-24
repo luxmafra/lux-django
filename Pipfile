@@ -7,6 +7,7 @@ verify_ssl = true
 pytest-django = "*"
 pytest-cov = "*"
 codecov = "*"
+model-mommy = "*"
 
 [packages]
 django = "*"
