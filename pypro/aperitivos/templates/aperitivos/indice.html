@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Lux Django - Aperitivos{% endblock title %}
+{% block description %}All Video's Page{% endblock description %}
+
+{% block body %}
+  <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		    <h1 class="mt-4 mb-3">List of Videos</h1>
+			<ol>
+				{% for video in videos %}
+					<li>{{ video.title | default:"Missing the Tile" }}</li>
+					{% empty %}
+					<li>No video was found on this page.</li>
+				{% endfor %}
+			</ol>
+
+		</div>
+	</div>
+  </div>
+{% endblock body %}
