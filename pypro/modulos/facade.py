@@ -1,6 +1,6 @@
 from typing import List
 
-from pypro.modulos.models import Module
+from pypro.modulos.models import Module, Aula
 
 
 def list_modules_ordered() -> List[Module]:
@@ -18,3 +18,7 @@ def encontrar_modulo(slug: str) -> Module:
 
 def list_aulas_of_modules_ordered(module: Module):
     return list(module.aula_set.order_by('order').all())
+
+
+def encontrar_aula(slug):
+    return Aula.objects.get(slug=slug)
