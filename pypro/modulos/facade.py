@@ -14,3 +14,7 @@ def list_modules_ordered() -> List[Module]:
 
 def encontrar_modulo(slug: str) -> Module:
     return Module.objects.get(slug=slug)
+
+
+def list_aulas_of_modules_ordered(module: Module):
+    return list(module.aula_set.order_by('order').all())
