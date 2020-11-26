@@ -3,6 +3,11 @@ from django.shortcuts import render
 from pypro.modulos import facade
 
 
+def index(request):
+    ctx = {'modules': facade.list_modules_with_aulas()}
+    return render(request, 'module/index.html', ctx)
+
+
 def detail(request, slug):
     module = facade.encontrar_modulo(slug)
     aulas = facade.list_aulas_of_modules_ordered(module)
