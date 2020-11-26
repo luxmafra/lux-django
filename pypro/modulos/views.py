@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from pypro.modulos import facade
@@ -14,6 +15,7 @@ def detail(request, slug):
     return render(request, 'module/module_detail.html', {'module': module, 'aulas': aulas})
 
 
+@login_required
 def aula(request, slug):
     aula = facade.encontrar_aula(slug)
     return render(request, 'module/aula_detalhe.html', {'aula': aula})
