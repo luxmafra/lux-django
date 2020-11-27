@@ -11,7 +11,7 @@ def list_modules_ordered() -> List[Module]:
    :return:
    """
 
-    return list(Module.objects.order_by('order').all())
+    return list(Module.objects.order_by('title').all())
 
 
 def encontrar_modulo(slug: str) -> Module:
