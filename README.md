@@ -6,10 +6,12 @@
 [![codecov](https://codecov.io/gh/luxmafra/lux-django/branch/main/graph/badge.svg?token=5YD8CLVKWR)](https://codecov.io/gh/luxmafra/lux-django)
 
 
-Online Course Platform developed by Lucas Mafra Chagas during the Bootcamp [Python Pro](https://github.com/pythonprobr). Apps were created to register modules, classes and students. Classes can only be accessed by registered students.
+Online Course Platform developed by Lucas Mafra Chagas during the Bootcamp [Python Pro](https://github.com/pythonprobr).
+Apps were created to register modules, classes and students. Classes can only be accessed by registered students.
 
 Application available at https://luxdjango.herokuapp.com/
 
-This application was implemented following the best practices of the [Twelve-Factor App](https://12factor.net). GitHub was used for version control and Heroku for the automatic deployment process.
-
+This application was implemented following the [Twelve-Factor App](https://12factor.net) methodology.
+GitHub was used for version control
+Heroku for the automatic deployment process.
 
